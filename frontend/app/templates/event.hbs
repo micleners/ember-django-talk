@@ -1,0 +1,17 @@
+{{ nav-bar }}
+<div class="jumbotron">
+  <h1 class="display-4">{{ model.title }}</h1>
+  <h5 class="lead"><strong>Presented by:</strong> {{ model.presenter }}</h5>
+  <p class="lead mb-0">{{ model.formattedTime }}</p>
+  <small class="lead"><strong>Hosted by: </strong>{{ model.location }}</small>
+  <hr class="my-4">
+  <p>{{ model.description }}</p>
+  <p class="lead">
+    <a class="btn btn-success btn-lg" href="#" role="button" {{action 'edit'}}>Edit Event</a>
+    <a class="btn btn-danger btn-lg" href="#" role="button" {{action 'delete'}}>Delete Event</a>
+  </p>
+</div>
+{{#if editing}}
+  {{ event-form event=model title="Edit Event" edit=true changeSave=(action 'save') changeCancel=(action 'cancel') }}
+{{/if}}
+{{outlet}}

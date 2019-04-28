@@ -1,0 +1,32 @@
+{{ nav-bar }}
+<div class="container mt-3">
+  <h2>Create an Event</h2>
+   <div class="form-horizontal form-group form-group-lg row">
+     <div class="col-md-5">
+       {{input value=form.title class="form-control m-2" placeholder="Title of Event" autofocus="off"}}
+       {{input value=form.presenter class="form-control m-2" placeholder="Who is Presenting" autofocus="off"}}
+       {{input value=form.time class="form-control m-2" type="datetime-local" id="example-datetime-local-input"}}
+       {{input value=form.location class="form-control m-2" placeholder="Location of Event" autofocus="off"}}
+       {{textarea value=form.description class="form-control m-2" placeholder="Description" autofocus="off"}}
+     </div>
+     <div class="col-md-3">
+       <button class="btn btn-primary btn-lg btn-block" {{action 'saveEvent'}}>Create Event</button>
+     </div>
+   </div>
+  <h2>Upcoming Events</h2>
+</div>
+<div class="container">
+  {{#each model as |event|}}
+    <div class="card mb-3">
+      <div class="card-header p-3 lead">
+        {{event.title}}{{#link-to 'event' event class="btn btn-outline-success float-right"}}Event Details{{/link-to}}
+      </div>
+      <ul class="list-group list-group-flush list-group-item-action">
+          <li class="list-group-item p-1 pl-3"><span class="glyphicon glyphicon-arrow-right"></span>Who: {{event.presenter}}</li>
+          <li class="list-group-item p-1 pl-3">What: {{event.description}}</li>
+          <li class="list-group-item p-1 pl-3">Where: {{event.location}}</li>
+          <li class="list-group-item p-1 pl-3">When: {{event.formattedTime}}</li>
+      </ul>
+    </div>
+      {{/each}}
+    </div>
