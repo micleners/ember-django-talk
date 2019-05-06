@@ -1,0 +1,16 @@
+<div class="container mt-3">
+  <h2 class="display-3">{{ title }}</h2>
+   <div class="form-horizontal form-group form-group-lg row">
+     <div class="col-md-5">
+       {{input value=form.title class="form-control m-2" placeholder="Title of Event" autofocus="off"}}
+       {{input value=form.presenter class="form-control m-2" placeholder="Who is Presenting" autofocus="off"}}
+       {{input value=form.time class="form-control m-2" type="datetime-local" id="example-datetime-local-input"}} 
+       {{input value=form.location class="form-control m-2" placeholder="Location of Event" autofocus="off"}}
+       {{textarea value=form.description class="form-control m-2" placeholder="Description" autofocus="off"}}
+     </div>
+   </div>
+   <div class="m-2">
+     <a class="btn btn-success btn-lg" href="#" role="button" {{action 'eventSave'}}>Save</a>
+     <a class="btn btn-danger btn-lg" href="#" role="button" {{action 'eventCancel'}}>Cancel</a>
+   </div>
+</div>
