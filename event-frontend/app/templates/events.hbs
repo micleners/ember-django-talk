@@ -2,6 +2,9 @@
   <button class="mt-3 btn btn-primary" {{ action "toggleCreateForm"}}>
     Create New Event
   </button>
+  <button class="mt-3 btn btn-success" {{ action "toggleEditForm"}}>
+    Edit Events
+  </button>
   {{#if showCreateForm}}
     <div class="card mb-3 mt-3 pb-3 card-header">
       {{event-form title="Create New Event" event=newEvent save=(action 'createSave') cancel=(action 'createCancel')}}
@@ -13,18 +16,25 @@
   <h2 class="display-1">Upcoming Events</h2>
   {{#each model as |event|}}
     {{#if event.id}}
-      <div class="card mb-3">
-        <div class="card-header p-3 lead">
-          {{event.title}}
-          <div class="btn btn-danger btn-lg float-right" role="button" {{action 'delete' event}}>Delete Event</div>
+      {{#unless showEditForm}}
+        <div class="card mb-3">
+          <div class="card-header p-3 lead">
+            {{event.title}}
+            <div class="btn btn-danger btn-lg float-right" role="button" {{action 'delete' event}}>Delete Event</div>
+          </div>
+          <ul class="list-group list-group-flush list-group-item-action">
+            <li class="list-group-item p-1 pl-3">Who: {{event.presenter}} </li>
+            <li class="list-group-item p-1 pl-3">What: {{event.description}}</li>
+            <li class="list-group-item p-1 pl-3">Where: {{event.location}}</li>
+            <li class="list-group-item p-1 pl-3">When: {{event.formattedTime}}</li>
+          </ul>
         </div>
-        <ul class="list-group list-group-flush list-group-item-action">
-          <li class="list-group-item p-1 pl-3">Who: {{event.presenter}} </li>
-          <li class="list-group-item p-1 pl-3">What: {{event.description}}</li>
-          <li class="list-group-item p-1 pl-3">Where: {{event.location}}</li>
-          <li class="list-group-item p-1 pl-3">When: {{event.formattedTime}}</li>
-        </ul>
-      </div>
+      {{/unless}}
+      {{#if showEditForm}}
+        <div class="card mb-3 mt-3 pb-3 card-header">
+          {{event-form title=event.title event=event save=(action 'editSave') cancel=(action 'editCancel')}}
+        </div>
+      {{/if}}
     {{/if}}
   {{/each}}
 </div>

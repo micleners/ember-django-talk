@@ -28,9 +28,9 @@ export default Component.extend({
             'description': this.form.description,
         });
         this.event.save().then(() => {
+            this.save();
             this.notifyPropertyChange('form');
         })
-        this.save();
     },
     eventCancel() {
         this.cancel();
