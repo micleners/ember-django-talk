@@ -13243,7 +13243,8 @@ a.anchor-link {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="The-Cheese">The Cheese<a class="anchor-link" href="#The-Cheese">&#182;</a></h1><p><img src="./static/simple-api-github.png" alt="API Endgoal" title="API Endgoal"></p>
-
+<p>Check out the full tutorial at:</p>
+<h1 id="https://github.com/micleners/DSM-Web-Geeks-Ember-Django"><a href="https://github.com/micleners/DSM-Web-Geeks-Ember-Django">https://github.com/micleners/DSM-Web-Geeks-Ember-Django</a><a class="anchor-link" href="#https://github.com/micleners/DSM-Web-Geeks-Ember-Django">&#182;</a></h1>
 </div>
 </div>
 </div></section></section><section><section>
@@ -13257,8 +13258,8 @@ a.anchor-link {
 <li><code>pipenv install django djangorestframework djangorestframework-jsonapi</code></li>
 </ul>
 <p>Activate Backend Shell: <code>pipenv shell</code></p>
-<p>Start Django Project: <code>django-admin startproject main_project .</code>
-Create Events App: <code>python manage.py startapp events</code></p>
+<p>Start Django Project: <code>django-admin startproject main_project .</code></p>
+<p>Create Events App: <code>python manage.py startapp events</code></p>
 <p>Start Server: <code>python manage.py runserver</code></p>
 <p>Cool - can't really do anything yet tho 😎</p>
 
@@ -13439,6 +13440,14 @@ Create Events App: <code>python manage.py startapp events</code></p>
 
 </div>
 </div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="COMMIT">COMMIT<a class="anchor-link" href="#COMMIT">&#182;</a></h1><p>Backend API endpoint created for events</p>
+
+</div>
+</div>
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13453,14 +13462,6 @@ Create Events App: <code>python manage.py startapp events</code></p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Recap-of-Backend">Recap of Backend<a class="anchor-link" href="#Recap-of-Backend">&#182;</a></h1><p><img src="./static/django-architecture.png" alt="The parts of our django project" title="The parts of our django project"></p>
 <h3 id="What's-in-this-diagram-that-we-have-not-yet-incorperated-into-our-django-project?">What's in this diagram that we have not yet incorperated into our django project?<a class="anchor-link" href="#What's-in-this-diagram-that-we-have-not-yet-incorperated-into-our-django-project?">&#182;</a></h3>
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="The-Cheese">The Cheese<a class="anchor-link" href="#The-Cheese">&#182;</a></h1><p><img src="./static/simple-api-github.png" alt="API Endgoal" title="API Endgoal"></p>
-
 </div>
 </div>
 </div></section></section><section><section>
@@ -13485,17 +13486,11 @@ Create Events App: <code>python manage.py startapp events</code></p>
 </div>
 </div>
 </div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### Activate JSON-API in our Django App</span>
-
-<span class="n">We</span> <span class="n">have</span> <span class="n">already</span> <span class="n">installed</span> <span class="n">DRF</span> <span class="n">JSON</span><span class="o">-</span><span class="n">API</span> <span class="n">at</span> <span class="n">the</span> <span class="n">start</span> <span class="n">of</span> <span class="n">the</span> <span class="n">tutorial</span><span class="o">.</span> <span class="n">All</span> <span class="n">we</span> <span class="n">need</span> <span class="n">to</span> <span class="n">do</span> <span class="n">now</span> <span class="ow">is</span> <span class="n">paste</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">following</span> <span class="n">code</span> <span class="n">that</span> <span class="n">will</span> <span class="nb">set</span> <span class="n">up</span> <span class="n">our</span> <span class="n">JSON</span><span class="o">-</span><span class="n">API</span> <span class="k">for</span> <span class="n">easy</span> <span class="n">communication</span> <span class="k">with</span> <span class="n">Ember</span> <span class="ow">in</span> <span class="err">`</span><span class="n">main_project</span><span class="o">/</span><span class="n">settings</span><span class="o">.</span><span class="n">py</span><span class="err">`</span><span class="p">:</span>
-
-<span class="err">```</span><span class="n">python</span>
-<span class="c1"># RestFramework settings for DjangoRestFramework-JSONAPI</span>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Activate-JSON-API-in-our-Django-App">Activate JSON-API in our Django App<a class="anchor-link" href="#Activate-JSON-API-in-our-Django-App">&#182;</a></h3><p>We have already installed DRF JSON-API at the start. Paste the following code in <code>main_project/settings.py</code> to set up JSON-API:</p>
+<div class="highlight"><pre><span></span><span class="c1"># RestFramework settings for DjangoRestFramework-JSONAPI</span>
 <span class="n">REST_FRAMEWORK</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;PAGE_SIZE&#39;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
 
@@ -13524,15 +13519,263 @@ Create Events App: <code>python manage.py startapp events</code></p>
 
    <span class="s1">&#39;TEST_REQUEST_DEFAULT_FORMAT&#39;</span><span class="p">:</span> <span class="s1">&#39;vnd.api+json&#39;</span>
 <span class="p">}</span>
-<span class="err">```</span>
+</pre></div>
+<p>You can refresh the API in your browser and see the data format has changed: <a href="http://localhost:8000/api/events">http://localhost:8000/api/events</a></p>
 
-<span class="n">You</span> <span class="n">can</span> <span class="n">refresh</span> <span class="n">the</span> <span class="n">API</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">browser</span> <span class="ow">and</span> <span class="n">see</span> <span class="n">the</span> <span class="n">data</span> <span class="nb">format</span> <span class="n">has</span> <span class="n">changed</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">localhost</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">events</span>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="COMMIT">COMMIT<a class="anchor-link" href="#COMMIT">&#182;</a></h1><p>Activate JSON-API at endpoints</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-Cheese">The Cheese<a class="anchor-link" href="#The-Cheese">&#182;</a></h1><p><img src="./static/simple-api-github.png" alt="API Endgoal" title="API Endgoal"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Frontend-Startup">Frontend Startup<a class="anchor-link" href="#Frontend-Startup">&#182;</a></h2><p>In base folder: <code>ember-django</code></p>
+<p>Install Ember: <code>npm install -g ember-cli</code></p>
+<p>Create App: <code>ember new events-frontend</code></p>
+<p>Enter into Directory: <code>cd events-frontend</code></p>
+<p><strong>Note</strong>: Ember already creates a git repository. You can delete it with <code>rm -rf .git</code> if you plan to use a sinple repo in the base folder</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Well-Hello,-Tomster!">Well Hello, Tomster!<a class="anchor-link" href="#Well-Hello,-Tomster!">&#182;</a></h2><p><img src="static/tomster_welcome.png" alt="Tomster Welcome" title="Ember Welcome Page"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Load-in-data---the-classic-&quot;GET&quot;">Load in data - the classic "GET"<a class="anchor-link" href="#Load-in-data---the-classic-&quot;GET&quot;">&#182;</a></h1><p>To get our data from the API, we will need to:</p>
+<ol>
+<li>Set up the API URL in <code>adapter/application.js</code></li>
+<li>Create a model for our event data</li>
+<li>Fetch our data in our route javascript file</li>
+<li>Display the data in the browser</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Set-up-the-API-URL-in-adapter/application.js">Set up the API URL in <code>adapter/application.js</code><a class="anchor-link" href="#Set-up-the-API-URL-in-adapter/application.js">&#182;</a></h2><p>Create our adapter with Ember CLI: <code>ember g adapter application</code></p>
+<p>In the file <code>app/adapters/application.js</code> update with:</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">DS</span> <span class="nx">from</span> <span class="s1">&#39;ember-data&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">computed</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@ember/object&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">RESTAdapter</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">host</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+    <span class="k">return</span> <span class="s1">&#39;http://localhost:8000&#39;</span><span class="p">;</span>
+  <span class="p">}),</span>
+  <span class="nx">namespace</span><span class="o">:</span> <span class="s1">&#39;api&#39;</span><span class="p">,</span>
+  <span class="nx">buildURL</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">record</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">//call the default buildURL and then append a slash</span>
+  <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">_super</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">record</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<p>Builds URL with: <code>{ host }</code> / <code>{ namespace }</code> / <code>{extra bits }</code> <code>{append /}</code></p>
+<p>--&gt; <code>http://localhost:8000/</code> <code>api/</code> <code>events/1</code> <code>/</code></p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Create-a-model-for-events">Create a model for events<a class="anchor-link" href="#Create-a-model-for-events">&#182;</a></h2><p>Create an ember model via the CLI to load our API data into:</p>
+<p><code>ember g model event</code></p>
+<p>We then go into <code>create app/models/event.js</code> and create our model with the same fields as we did in django:</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">DS</span> <span class="nx">from</span> <span class="s1">&#39;ember-data&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">computed</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@ember/object&#39;</span>
+<span class="kr">import</span> <span class="nx">moment</span> <span class="nx">from</span> <span class="s1">&#39;moment&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">Model</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">DS</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Model</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">attr</span><span class="p">(),</span>
+    <span class="nx">presenter</span><span class="o">:</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">attr</span><span class="p">(),</span>
+    <span class="nx">time</span><span class="o">:</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">attr</span><span class="p">(),</span>
+    <span class="nx">location</span><span class="o">:</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">attr</span><span class="p">(),</span>
+    <span class="nx">description</span><span class="o">:</span> <span class="nx">DS</span><span class="p">.</span><span class="nx">attr</span><span class="p">(),</span>
+    <span class="nx">formattedTime</span><span class="o">:</span> <span class="nx">computed</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nx">moment</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">time</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">&quot;ddd @ h:mm a, MMMM D, YYYY&quot;</span><span class="p">)</span>
+    <span class="p">})</span>
+<span class="p">});</span>
 </pre></div>
 
-    </div>
 </div>
 </div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Get-data-in-route-js">Get data in route js<a class="anchor-link" href="#Get-data-in-route-js">&#182;</a></h2><p>Generate our route to load and display our data: <code>ember g route events</code></p>
+<p>In the file <code>app/routes/events.js</code> and we will load our data as an API call:</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">Route</span> <span class="nx">from</span> <span class="s1">&#39;@ember/routing/route&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">inject</span> <span class="nx">as</span> <span class="nx">service</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@ember/service&#39;</span><span class="p">;</span>
 
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Route</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">store</span><span class="o">:</span> <span class="nx">service</span><span class="p">(),</span>
+
+    <span class="nx">model</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;store&#39;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="nx">store</span><span class="p">.</span><span class="nx">findAll</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<p>Spin up server and let's see what we got!</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Deal-With-CORS">Deal With CORS<a class="anchor-link" href="#Deal-With-CORS">&#182;</a></h2><p>A Django App that adds CORS (Cross-Origin Resource Sharing) headers to responses. Just what we need! Install with pip into your django project:</p>
+<p><code>pip install django-cors-headers</code></p>
+<p>Add it to your installed_apps in <code>settings.py</code></p>
+<div class="highlight"><pre><span></span><span class="n">INSTALLED_APPS</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="s1">&#39;django.contrib.admin&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.auth&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.contenttypes&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.sessions&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.messages&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.staticfiles&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;rest_framework&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;events&#39;</span><span class="p">,</span>
+  <span class="c1"># corsheaders allows for cross origin communication</span>
+  <span class="s1">&#39;corsheaders&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Add it to the top of your middleware:</p>
+<div class="highlight"><pre><span></span><span class="n">MIDDLEWARE</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="c1"># put CorsMiddleware at the top of middleware</span>
+  <span class="s1">&#39;corsheaders.middleware.CorsMiddleware&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.middleware.security.SecurityMiddleware&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;django.contrib.sessions.middleware.SessionMiddleware&#39;</span><span class="p">,</span>
+</pre></div>
+<p>And lastly, set the mode to debug so no origin shall be denied (<strong>note</strong>: you would not want to put this app on the web this way, but for local development this is fine)</p>
+<div class="highlight"><pre><span></span><span class="c1"># opens access localhost:8000, including from frontend localhost:4200</span>
+<span class="n">CORS_ORIGIN_ALLOW_ALL</span> <span class="o">=</span> <span class="n">DEBUG</span>
+</pre></div>
+<p>You may need to stop and start your backend server again, but with a referesh of the frontend, this error should go away. Now how to get the data to display in the browser? We'll work on that next!</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Load-Data-into-the-Handlebars">Load Data into the Handlebars<a class="anchor-link" href="#Load-Data-into-the-Handlebars">&#182;</a></h2><p>Navigate into <code>app/templates/events.hbs</code> and load our model fields and do some styling along with it:</p>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h2</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;display-1&quot;</span><span class="p">&gt;</span>Upcoming Events<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  {{#each model as |event|}}
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card mb-3&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-header p-3 lead&quot;</span><span class="p">&gt;</span>{{event.title}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group list-group-flush list-group-item-action&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item p-1 pl-3&quot;</span><span class="p">&gt;</span>Who: {{event.presenter}} <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item p-1 pl-3&quot;</span><span class="p">&gt;</span>What: {{event.description}}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item p-1 pl-3&quot;</span><span class="p">&gt;</span>Where: {{event.location}}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group-item p-1 pl-3&quot;</span><span class="p">&gt;</span>When: {{event.formattedTime}}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  {{/each}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+<p>Spin up the server and check it out!</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Low-Hanging-Fruit:-Delete">Low Hanging Fruit: Delete<a class="anchor-link" href="#Low-Hanging-Fruit:-Delete">&#182;</a></h2><p>Plan of action:</p>
+<ol>
+<li>Create an action in <code>events.hbs</code> to trigger event in js</li>
+<li>Create a controller for events.js to handle our action</li>
+<li>Have action call <code>destroyRecord</code> method on the event to delete the instance</li>
+</ol>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-an-action-in-events.hbs">Create an action in events.hbs<a class="anchor-link" href="#Create-an-action-in-events.hbs">&#182;</a></h3><p>Ember action invoked by: <code>{{action 'delete' event}}</code>.</p>
+<ul>
+<li><code>action</code> invokes an action that should be handled in the route or controller</li>
+<li><code>'delete'</code> will be the name of our action in our controller</li>
+<li><code>event</code> is a parameter that will be passed into our action</li>
+</ul>
+<div class="highlight"><pre><span></span>...truncated...
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card-header p-3 lead&quot;</span><span class="p">&gt;</span>
+      {{event.title}}
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-danger btn-lg float-right&quot;</span> <span class="na">role</span><span class="o">=</span><span class="s">&quot;button&quot;</span> <span class="err">{{</span><span class="na">action</span> <span class="err">&#39;</span><span class="na">delete</span><span class="err">&#39;</span> <span class="na">event</span><span class="err">}}</span><span class="p">&gt;</span>Del
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-group list-group-flush list-group-item-action&quot;</span><span class="p">&gt;</span>
+...truncated...
+</pre></div>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Create-a-crontroller-for-events.js-to-handle-our-action">Create a crontroller for events.js to handle our action<a class="anchor-link" href="#Create-a-crontroller-for-events.js-to-handle-our-action">&#182;</a></h3><p>Using Ember CLI:</p>
+<p><code>ember g controller events</code></p>
+<p>Then navigate into the file <code>app/controllers/events.js</code>. We will create this action to handle our delete:</p>
+<div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">Controller</span> <span class="nx">from</span> <span class="s1">&#39;@ember/controller&#39;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Controller</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+  <span class="nx">actions</span><span class="o">:</span> <span class="p">{</span>
+    <span class="k">delete</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">event</span><span class="p">.</span><span class="nx">destroyRecord</span><span class="p">()</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#128588;-&#128588;-Now-we-have-R(etrieve)-and-D(elete)-of-CRUD-for-our-REST-API-Frontend-Client">&#128588; &#128588; Now we have R(etrieve) and D(elete) of CRUD for our REST API Frontend Client<a class="anchor-link" href="#&#128588;-&#128588;-Now-we-have-R(etrieve)-and-D(elete)-of-CRUD-for-our-REST-API-Frontend-Client">&#182;</a></h3><p>Unfortunately we won't have time to complete all of our CRUD actions in this demonstration. This includes fun things like creating components, passing data down and bubbling actions up. Can it get any cooler?</p>
+<p>Check out the full tutorial at:</p>
+<h1 id="https://github.com/micleners/DSM-Web-Geeks-Ember-Django"><a href="https://github.com/micleners/DSM-Web-Geeks-Ember-Django">https://github.com/micleners/DSM-Web-Geeks-Ember-Django</a><a class="anchor-link" href="#https://github.com/micleners/DSM-Web-Geeks-Ember-Django">&#182;</a></h1><h2 id="Questions?">Questions?<a class="anchor-link" href="#Questions?">&#182;</a></h2>
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
