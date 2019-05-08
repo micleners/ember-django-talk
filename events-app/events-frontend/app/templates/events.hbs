@@ -2,7 +2,12 @@
   <h2 class="display-1">Upcoming Events</h2>
   {{#each model as |event|}}
     <div class="card mb-3">
-      <div class="card-header p-3 lead">{{event.title}}</div>
+      <div class="card-header p-3 lead">
+        {{event.title}}
+        <div class="btn btn-danger float-right" role="button" {{action "delete" event}}>
+          Delete Event
+        </div>
+      </div>
       <ul class="list-group list-group-flush list-group-item-action">
         <li class="list-group-item p-1 pl-3">Who: {{event.presenter}} </li>
         <li class="list-group-item p-1 pl-3">What: {{event.description}}</li>
