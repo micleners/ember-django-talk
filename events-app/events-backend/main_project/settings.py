@@ -31,19 +31,21 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    # import rest_framework for viewset and serializer helpers
-    'rest_framework',
-    # add `events` application to main project
-    'events'
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+  'rest_framework',
+  'events',
+  # corsheaders allows for cross origin communication
+  'corsheaders',
 ]
 
 MIDDLEWARE = [
+    # put CorsMiddleware at the top of middleware
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -52,6 +54,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# opens access localhost:8000, including from frontend localhost:4200
+CORS_ORIGIN_ALLOW_ALL = DEBUG
 
 REST_FRAMEWORK = {
   'PAGE_SIZE': 100,
