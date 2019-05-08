@@ -7,6 +7,15 @@ Michael Johnson will speak about Full Stack Web Development with Ember.js and Dj
 ### About the Author
 Michael Johnson is a software developer who transitioned from a career in science and engineering. Michael enjoys fun and games, but gets the biggest thrill in life from collaborative learning and teaching. He is an advocate for minorities in STEM and loves to dance. Originally from just outside of Seattle, Mike moved to Iowa for graduate school where he did research on photonic sensors, after studying bacteria as an undergrad. He taught physics at Grand View University before transitioning to web development. The tech stack for this presentation is inspired by the development process he learned while working at IMT Group’s Computer Service Dev Team. While enjoying the tech and team at IMT, he has chosen to pursue other adventures with Source Allies.
 
+# Previous Django Rest Framework Talk/Tutorial
+Involves a much deeper dive into the backend of what is presented in this tutorial: Django and Django Rest Framework.
+
+
+![DRF Pyowa Presentation](./static/pyowa-screenshots.png "DRF Pyowa Presentation")
+
+Check out that tutorial at: 
+# github.com/micleners/pyowa-drf-demo
+
 ## Resources
 ### Python/Envs:
 [Using Pyenv + Pipenv](https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c).
@@ -604,7 +613,7 @@ This will create the file `app/adapters/application.js`, open it now and update 
 import DS from 'ember-data';
 import { computed } from '@ember/object';
 
-export default DS.RESTAdapter.extend({
+export default DS.JSONAPIAdapter.extend({
   host: computed(function(){
     return 'http://localhost:8000';
   }),
@@ -812,7 +821,7 @@ You can put an ember action on any element in your hbs. We will be using a div a
 ...truncated...
     <div class="card-header p-3 lead">
       {{event.title}}
-      <div class="btn btn-danger btn-lg float-right" role="button" {{action 'delete' event}}>Del
+      <div class="btn btn-danger btn-lg float-right" role="button" {{action 'delete' event}}>Delete Event</div>
     </div>
     <ul class="list-group list-group-flush list-group-item-action">
 ...truncated...
